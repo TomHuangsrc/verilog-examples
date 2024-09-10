@@ -1,0 +1,5 @@
+I tried many times to output a real bin file. 
+
+until now, I only find "file = $fopen("output.bin", "wb");$fwrite(file, "%c", reg_value[7:0]);" realize my purpose.
+
+But there is one limit, the output is too slow than the input, If one clock there is a new 512bit input, then output need 64 clock to write it to a bin file.
