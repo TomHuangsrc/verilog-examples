@@ -1,0 +1,13 @@
+I can use fread and fscanf to read the input file.
+
+for txt file:
+when open txt file should use "r"
+a. fscanf: it can output half of the input data with right result with fwrite plus %h, just becasue the limit of reg is 64bit, but the input txt is 128bit
+b. fread: it output  always err when fwrite with %s
+
+for bin file:
+when open bin file should use "rb"
+a. fscanf: output err
+b. fread: it output result with fwrite plus %h, it doesnot limit by reg width. for the input file 128bit/line, it should output 2 line and each line include 64bit
+
+By the way, iverilog not support fread, but support fscanf

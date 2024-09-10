@@ -1,0 +1,4 @@
+D:\temp\generate-verilog\src\counter1.v
+D:\temp\generate-verilog\src\counter2.v
+D:\temp\generate-verilog\src\top.v
+D:\temp\generate-verilog\tb\top_tb.v
