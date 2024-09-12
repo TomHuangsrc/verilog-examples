@@ -1,1 +1,1 @@
-This is Some Verilog code I　can refer.
+There are some verilog code I can refer.
