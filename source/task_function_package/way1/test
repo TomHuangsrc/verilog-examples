@@ -1,0 +1,53 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001ef12afebf0 .scope module, "my_package" "my_package" 2 2;
+ .timescale 0 0;
+S_000001ef13023000 .scope function.vec4.s8, "my_function" "my_function" 2 14, 2 14 0, S_000001ef12afebf0;
+ .timescale 0 0;
+v000001ef13023190_0 .var "in_data", 7 0;
+; Variable my_function is vec4 return value of scope S_000001ef13023000
+TD_my_package.my_function ;
+    %load/vec4 v000001ef13023190_0;
+    %addi 1, 0, 8;
+    %ret/vec4 0, 0, 8;  Assign to my_function (store_vec4_to_lval)
+    %end;
+S_000001ef130232d0 .scope task, "my_task" "my_task" 2 6, 2 6 0, S_000001ef12afebf0;
+ .timescale 0 0;
+v000001ef12afd2b0_0 .var "data", 7 0;
+TD_my_package.my_task ;
+    %vpi_call 2 10 "$display", "Data received: %h", v000001ef12afd2b0_0 {0 0 0};
+    %end;
+S_000001ef12afed80 .scope module, "sub" "sub" 3 4;
+ .timescale 0 0;
+v000001ef12afd350_0 .var "data", 7 0;
+v000001ef12afd3f0_0 .var "result", 7 0;
+    .scope S_000001ef12afed80;
+T_2 ;
+    %pushi/vec4 165, 0, 8;
+    %store/vec4 v000001ef12afd350_0, 0, 8;
+    %load/vec4 v000001ef12afd350_0;
+    %store/vec4 v000001ef12afd2b0_0, 0, 8;
+    %fork TD_my_package.my_task, S_000001ef130232d0;
+    %join;
+    %load/vec4 v000001ef12afd350_0;
+    %store/vec4 v000001ef13023190_0, 0, 8;
+    %callf/vec4 TD_my_package.my_function, S_000001ef13023000;
+    %store/vec4 v000001ef12afd3f0_0, 0, 8;
+    %vpi_call 3 14 "$display", "Result: %h", v000001ef12afd3f0_0 {0 0 0};
+    %delay 200, 0;
+    %vpi_call 3 15 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "./my_package.vh";
+    "top.v";
