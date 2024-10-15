@@ -1,0 +1,26 @@
+LXT2 info: dumpfile test_uart_tx.lxt opened for output.
+Running test...
+test 1: walk
+[source] Sending frame AXIStreamFrame(data=bytearray(b'\x00\x01\x02\x04\x08\x10 @\x80'), keep=None, id=None, dest=None, user=None, last_cycle_user=None)
+[sink] Got data byte 0
+[sink] Got data byte 1
+[sink] Got data byte 2
+[sink] Got data byte 4
+[sink] Got data byte 8
+[sink] Got data byte 16
+[sink] Got data byte 32
+[sink] Got data byte 64
+[sink] Got data byte 128
+bytearray(b'\x00\x01\x02\x04\x08\x10 @\x80')
+test 2: walk 2
+[source] Sending frame AXIStreamFrame(data=bytearray(b'\x00\x01\x03\x07\x0f\x1f?\x7f\xff'), keep=None, id=None, dest=None, user=None, last_cycle_user=None)
+[sink] Got data byte 0
+[sink] Got data byte 1
+[sink] Got data byte 3
+[sink] Got data byte 7
+[sink] Got data byte 15
+[sink] Got data byte 31
+[sink] Got data byte 63
+[sink] Got data byte 127
+[sink] Got data byte 255
+bytearray(b'\x00\x01\x03\x07\x0f\x1f?\x7f\xff')

@@ -1,0 +1,42 @@
+LXT2 info: dumpfile test_uart_rx.lxt opened for output.
+Running test...
+test 1: walk
+[source] Sending data byte 0
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x00'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 1
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x01'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 2
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x02'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 4
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x04'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 8
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x08'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 16
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x10'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 32
+[sink] Got frame AXIStreamFrame(data=bytearray(b' '), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 64
+[sink] Got frame AXIStreamFrame(data=bytearray(b'@'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 128
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x80'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+bytearray(b'\x00\x01\x02\x04\x08\x10 @\x80')
+test 2: walk 2
+[source] Sending data byte 0
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x00'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 1
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x01'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 3
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x03'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 7
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x07'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 15
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x0f'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 31
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x1f'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 63
+[sink] Got frame AXIStreamFrame(data=bytearray(b'?'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 127
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\x7f'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+[source] Sending data byte 255
+[sink] Got frame AXIStreamFrame(data=bytearray(b'\xff'), keep=[1], id=[0], dest=[0], user=[0], last_cycle_user=0)
+bytearray(b'\x00\x01\x03\x07\x0f\x1f?\x7f\xff')

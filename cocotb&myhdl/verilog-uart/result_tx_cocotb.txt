@@ -1,0 +1,649 @@
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/d/tt/verilog-uart/tb/uart_tx'
+rm -f results.xml
+MODULE=test_uart_tx TESTCASE= TOPLEVEL=uart_tx TOPLEVEL_LANG=verilog \
+         /c/iverilog/bin/vvp -M C:/Users/huanggk/AppData/Local/anaconda3/Lib/site-packages/cocotb/libs -m cocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed\gpi_embed.cpp:81   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (devel)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.1 from C:\Users\huanggk\AppData\Local\anaconda3\Lib\site-packages\cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1728972405
+     0.00ns INFO     cocotb.regression                  Found test test_uart_tx.run_test_001
+     0.00ns INFO     cocotb.regression                  Found test test_uart_tx.run_test_002
+     0.00ns INFO     cocotb.regression                  running run_test_001 (1/2)
+                                                          Automatically generated test
+                                                          
+                                                          payload_lengths: size_list (No docstring supplied)
+                                                          payload_data: incrementing_payload (No docstring supplied)
+     0.00ns INFO     cocotb.uart_tx.s_axis              AXI stream source
+     0.00ns INFO     cocotb.uart_tx.s_axis              cocotbext-axi version 0.1.24
+     0.00ns INFO     cocotb.uart_tx.s_axis              Copyright (c) 2020 Alex Forencich
+     0.00ns INFO     cocotb.uart_tx.s_axis              https://github.com/alexforencich/cocotbext-axi
+     0.00ns INFO     cocotb.uart_tx.s_axis              AXI stream source configuration:
+     0.00ns INFO     cocotb.uart_tx.s_axis                Byte size: 8 bits
+     0.00ns INFO     cocotb.uart_tx.s_axis                Data width: 8 bits (1 bytes)
+     0.00ns INFO     cocotb.uart_tx.s_axis              AXI stream source signals:
+     0.00ns INFO     cocotb.uart_tx.s_axis                tdata width: 8 bits
+     0.00ns INFO     cocotb.uart_tx.s_axis                tdest: not present
+     0.00ns INFO     cocotb.uart_tx.s_axis                tid: not present
+     0.00ns INFO     cocotb.uart_tx.s_axis                tkeep: not present
+     0.00ns INFO     cocotb.uart_tx.s_axis                tlast: not present
+     0.00ns INFO     cocotb.uart_tx.s_axis                tready width: 1 bits
+     0.00ns INFO     cocotb.uart_tx.s_axis                tuser: not present
+     0.00ns INFO     cocotb.uart_tx.s_axis                tvalid width: 1 bits
+     0.00ns INFO     cocotb.uart_tx.s_axis              Reset de-asserted
+     0.00ns INFO     cocotb.uart_tx.txd                 UART sink
+     0.00ns INFO     cocotb.uart_tx.txd                 cocotbext-uart version 0.1.2
+     0.00ns INFO     cocotb.uart_tx.txd                 Copyright (c) 2020 Alex Forencich
+     0.00ns INFO     cocotb.uart_tx.txd                 https://github.com/alexforencich/cocotbext-uart
+     0.00ns INFO     cocotb.uart_tx.txd                 UART sink configuration:
+     0.00ns INFO     cocotb.uart_tx.txd                   Baud rate: 3000000 bps
+     0.00ns INFO     cocotb.uart_tx.txd                   Byte size: 8 bits
+     0.00ns INFO     cocotb.uart_tx.txd                   Stop bits: 1.000000 bits
+     8.00ns INFO     cocotb.uart_tx.s_axis              Reset asserted
+    24.00ns INFO     cocotb.uart_tx.s_axis              Reset de-asserted
+    48.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=48000, sim_time_end=None)
+  3219.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+  3219.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00')
+  5224.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=5224000, sim_time_end=None)
+  8395.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+ 11603.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+ 11603.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01')
+ 13608.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=13608000, sim_time_end=None)
+ 16779.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+ 19987.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+ 23195.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+ 23195.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02')
+ 25200.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=25200000, sim_time_end=None)
+ 28371.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+ 31579.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+ 34787.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+ 37995.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+ 37995.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03')
+ 40000.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=40000000, sim_time_end=None)
+ 43171.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+ 46379.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+ 49587.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+ 52795.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+ 56003.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+ 56003.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04')
+ 58008.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=58008000, sim_time_end=None)
+ 61179.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+ 64387.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+ 67595.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+ 70803.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+ 74011.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+ 77219.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+ 77219.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05')
+ 79224.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=79224000, sim_time_end=None)
+ 82395.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+ 85603.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+ 88811.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+ 92019.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+ 95227.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+ 98435.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+101643.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+101643.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06')
+103648.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=103648000, sim_time_end=None)
+106819.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+110027.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+113235.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+116443.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+119651.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+122859.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+126067.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+129275.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+129275.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07')
+131280.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=131280000, sim_time_end=None)
+134451.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+137659.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+140867.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+144075.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+147283.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+150491.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+153699.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+156907.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+160115.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x08
+160115.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08')
+162120.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=162120000, sim_time_end=None)
+165291.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+168499.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+171707.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+174915.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+178123.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+181331.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+184539.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+187747.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+190955.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x08
+194163.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x09
+194163.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t')
+196168.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=196168000, sim_time_end=None)
+199339.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+202547.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+205755.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+208963.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+212171.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+215379.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+218587.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+221795.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+225003.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x08
+228211.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x09
+231419.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0a
+231419.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n')
+233424.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=233424000, sim_time_end=None)
+236595.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+239803.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+243011.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+246219.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+249427.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+252635.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+255843.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+259051.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+262259.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x08
+265467.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x09
+268675.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0a
+271883.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0b
+271883.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b')
+273888.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=273888000, sim_time_end=None)
+277059.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+280267.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+283475.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+286683.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+289891.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+293099.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+296307.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+299515.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+302723.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x08
+305931.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x09
+309139.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0a
+312347.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0b
+315555.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0c
+315555.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c')
+317560.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=317560000, sim_time_end=None)
+320731.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+323939.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+327147.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+330355.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+333563.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+336771.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+339979.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+343187.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+346395.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x08
+349603.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x09
+352811.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0a
+356019.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0b
+359227.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0c
+362435.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0d
+362435.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r')
+364440.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=364440000, sim_time_end=None)
+367611.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+370819.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+374027.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+377235.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+380443.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+383651.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+386859.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+390067.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+393275.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x08
+396483.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x09
+399691.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0a
+402899.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0b
+406107.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0c
+409315.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0d
+412523.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+412523.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e')
+414528.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=414528000, sim_time_end=None)
+417699.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+420907.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x01
+424115.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+427323.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+430531.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x04
+433739.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x05
+436947.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x06
+440155.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x07
+443363.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x08
+446571.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x09
+449779.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0a
+452987.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0b
+456195.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0c
+459403.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0d
+462611.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+465819.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0f
+469027.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x10
+472235.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x11
+475443.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x12
+478651.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x13
+481859.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x14
+485067.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x15
+488275.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x16
+491483.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x17
+494691.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x18
+497899.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x19
+501107.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x1a
+504315.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x1b
+507523.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x1c
+510731.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x1d
+513939.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x1e
+517147.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x1f
+520355.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x20
+523563.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x21
+526771.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x22
+529979.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x23
+533187.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x24
+536395.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x25
+539603.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x26
+542811.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x27
+546019.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x28
+549227.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x29
+552435.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x2a
+555643.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x2b
+558851.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x2c
+562059.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x2d
+565267.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x2e
+568475.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x2f
+571683.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x30
+574891.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x31
+578099.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x32
+581307.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x33
+584515.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x34
+587723.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x35
+590931.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x36
+594139.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x37
+597347.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+600555.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x39
+603763.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x3a
+606971.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x3b
+610179.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x3c
+613387.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x3d
+616595.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x3e
+619803.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x3f
+623011.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x40
+626219.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x41
+629427.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x42
+632635.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x43
+635843.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x44
+639051.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x45
+642259.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x46
+645467.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x47
+648675.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x48
+651883.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x49
+655091.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x4a
+658299.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x4b
+661507.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x4c
+664715.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x4d
+667923.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x4e
+671131.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x4f
+674339.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x50
+677547.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x51
+680755.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x52
+683963.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x53
+687171.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x54
+690379.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x55
+693587.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x56
+696795.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x57
+700003.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x58
+703211.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x59
+706419.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x5a
+709627.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x5b
+712835.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x5c
+716043.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x5d
+719251.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x5e
+722459.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x5f
+725667.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x60
+728875.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x61
+732083.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x62
+735291.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x63
+738499.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x64
+741707.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x65
+744915.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x66
+748123.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x67
+751331.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x68
+754539.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x69
+757747.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x6a
+760955.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x6b
+764163.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x6c
+767371.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x6d
+770579.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x6e
+773787.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x6f
+776995.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x70
+780203.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x71
+783411.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x72
+786619.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x73
+789827.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x74
+793035.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x75
+796243.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x76
+799451.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x77
+802659.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x78
+805867.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x79
+809075.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7a
+812283.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7b
+815491.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7c
+818699.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7d
+821907.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7e
+825115.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7f
+825115.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f')
+827128.00ns INFO     cocotb.regression                  run_test_001 passed
+827128.00ns INFO     cocotb.regression                  running run_test_002 (2/2)
+                                                          Automatically generated test
+                                                          
+                                                          payload_lengths: size_list (No docstring supplied)
+                                                          payload_data: prbs_payload (No docstring supplied)
+827128.00ns INFO     cocotb.uart_tx.s_axis              AXI stream source
+827128.00ns INFO     cocotb.uart_tx.s_axis              cocotbext-axi version 0.1.24
+827128.00ns INFO     cocotb.uart_tx.s_axis              Copyright (c) 2020 Alex Forencich
+827128.00ns INFO     cocotb.uart_tx.s_axis              https://github.com/alexforencich/cocotbext-axi
+827128.00ns INFO     cocotb.uart_tx.s_axis              AXI stream source configuration:
+827128.00ns INFO     cocotb.uart_tx.s_axis                Byte size: 8 bits
+827128.00ns INFO     cocotb.uart_tx.s_axis                Data width: 8 bits (1 bytes)
+827128.00ns INFO     cocotb.uart_tx.s_axis              AXI stream source signals:
+827128.00ns INFO     cocotb.uart_tx.s_axis                tdata width: 8 bits
+827128.00ns INFO     cocotb.uart_tx.s_axis                tdest: not present
+827128.00ns INFO     cocotb.uart_tx.s_axis                tid: not present
+827128.00ns INFO     cocotb.uart_tx.s_axis                tkeep: not present
+827128.00ns INFO     cocotb.uart_tx.s_axis                tlast: not present
+827128.00ns INFO     cocotb.uart_tx.s_axis                tready width: 1 bits
+827128.00ns INFO     cocotb.uart_tx.s_axis                tuser: not present
+827128.00ns INFO     cocotb.uart_tx.s_axis                tvalid width: 1 bits
+827128.00ns INFO     cocotb.uart_tx.s_axis              Reset de-asserted
+827128.00ns INFO     cocotb.uart_tx.txd                 UART sink
+827128.00ns INFO     cocotb.uart_tx.txd                 cocotbext-uart version 0.1.2
+827128.00ns INFO     cocotb.uart_tx.txd                 Copyright (c) 2020 Alex Forencich
+827128.00ns INFO     cocotb.uart_tx.txd                 https://github.com/alexforencich/cocotbext-uart
+827128.00ns INFO     cocotb.uart_tx.txd                 UART sink configuration:
+827128.00ns INFO     cocotb.uart_tx.txd                   Baud rate: 3000000 bps
+827128.00ns INFO     cocotb.uart_tx.txd                   Byte size: 8 bits
+827128.00ns INFO     cocotb.uart_tx.txd                   Stop bits: 1.000000 bits
+827144.00ns INFO     cocotb.uart_tx.s_axis              Reset asserted
+827160.00ns INFO     cocotb.uart_tx.s_axis              Reset de-asserted
+827184.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=827184001, sim_time_end=None)
+830355.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+830355.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00')
+832360.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=832360001, sim_time_end=None)
+835531.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+838739.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+838739.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00')
+840744.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=840744001, sim_time_end=None)
+843915.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+847123.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+850331.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+850331.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00')
+852336.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=852336001, sim_time_end=None)
+855507.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+858715.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+861923.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+865131.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+865131.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e')
+867136.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=867136001, sim_time_end=None)
+870307.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+873515.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+876723.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+879931.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+883139.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+883139.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00')
+885144.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=885144001, sim_time_end=None)
+888315.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+891523.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+894731.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+897939.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+901147.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+904355.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+904355.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00')
+906360.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=906360001, sim_time_end=None)
+909531.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+912739.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+915947.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+919155.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+922363.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+925571.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+928779.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+928779.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00')
+930784.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=930784001, sim_time_end=None)
+933955.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+937163.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+940371.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+943579.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+946787.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+949995.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+953203.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+956411.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+956411.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc')
+958416.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=958416001, sim_time_end=None)
+961587.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+964795.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+968003.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+971211.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+974419.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+977627.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+980835.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+984043.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+987251.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+987251.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00')
+989256.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=989256001, sim_time_end=None)
+992427.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+995635.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+998843.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1002051.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1005259.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1008467.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1011675.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1014883.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1018091.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1021299.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1021299.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00')
+1023304.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=1023304001, sim_time_end=None)
+1026475.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1029683.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1032891.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1036099.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1039307.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1042515.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1045723.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1048931.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1052139.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1055347.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1058555.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1058555.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e')
+1060560.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=1060560001, sim_time_end=None)
+1063731.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1066939.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1070147.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1073355.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1076563.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1079771.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1082979.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1086187.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1089395.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1092603.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1095811.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1099019.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1099019.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8')
+1101024.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=1101024001, sim_time_end=None)
+1104195.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1107403.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1110611.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1113819.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1117027.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1120235.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1123443.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1126651.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1129859.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1133067.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1136275.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1139483.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1142691.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1142691.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00')
+1144696.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=1144696001, sim_time_end=None)
+1147867.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1151075.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1154283.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1157491.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1160699.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1163907.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1167115.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1170323.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1173531.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1176739.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1179947.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1183155.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1186363.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1189571.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1189571.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00')
+1191576.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00\xff'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=1191576001, sim_time_end=None)
+1194747.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1197955.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1201163.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1204371.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1207579.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1210787.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1213995.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1217203.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1220411.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1223619.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1226827.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1230035.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1233243.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1236451.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1239659.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1239659.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00\xff')
+1241664.00ns INFO     cocotb.uart_tx.s_axis              TX frame: AxiStreamFrame(tdata=bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00\xff\xf0\x00\x0e\x00\xe0\x00\xfc\x0f\xc0\x0e8\xe3\x80\xff\xff\xff\x0e\x00\x00\x0e\xfc\x00\x00\xf28\x00\x0e\xc7\xf0\x00\xf1\xf0\xe0\x0e\xfc\xef\xc0\xf27#\x8e\xc7\x1c\x7f\xf1\xff\xff\x00\xfc\x00\x0e\x0e8\x00\xfc\xff\xf0\x0e6\x00\xe0\xff\x0c\x0f\xce\x0e\xd8\xe3|\xf0?\xf16\xe3\x80\xf1\x03\xff\x0e\xf28\x0e\xf2\xc7\xf0\xf2\xc9\xf0\xee\xc9\x0c\xef1\x02\xd7-r(\xdc\x8d\xc6\xdcq\xc7\xe0\x7f\xff\xf1\xc7\x00\x00\xff\xfe'), tkeep=None, tid=None, tdest=None, tuser=None, sim_time_start=1241664001, sim_time_end=None)
+1244835.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1248043.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1251251.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1254459.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1257667.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1260875.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1264083.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1267291.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1270499.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1273707.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1276915.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1280123.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1283331.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1286539.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1289747.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1292955.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf0
+1296163.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1299371.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1302579.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1305787.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xe0
+1308995.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1312203.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1315411.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0f
+1318619.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc0
+1321827.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1325035.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1328243.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xe3
+1331451.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x80
+1334659.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1337867.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1341075.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1344283.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1347491.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1350699.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1353907.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1357115.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1360323.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1363531.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1366739.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf2
+1369947.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1373155.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1376363.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1379571.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc7
+1382779.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf0
+1385987.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1389195.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf1
+1392403.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf0
+1395611.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xe0
+1398819.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1402027.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1405235.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xef
+1408443.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc0
+1411651.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf2
+1414859.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x37
+1418067.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x23
+1421275.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x8e
+1424483.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc7
+1427691.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x1c
+1430899.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7f
+1434107.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf1
+1437315.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1440523.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1443731.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1446939.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1450147.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1453355.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1456563.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1459771.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1462979.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1466187.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfc
+1469395.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1472603.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf0
+1475811.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1479019.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x36
+1482227.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1485435.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xe0
+1488643.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1491851.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0c
+1495059.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0f
+1498267.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xce
+1501475.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1504683.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xd8
+1507891.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xe3
+1511099.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7c
+1514307.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf0
+1517515.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x3f
+1520723.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf1
+1523931.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x36
+1527139.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xe3
+1530347.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x80
+1533555.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf1
+1536763.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x03
+1539971.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1543179.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1546387.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf2
+1549595.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x38
+1552803.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0e
+1556011.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf2
+1559219.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc7
+1562427.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf0
+1565635.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf2
+1568843.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc9
+1572051.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf0
+1575259.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xee
+1578467.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc9
+1581675.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x0c
+1584883.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xef
+1588091.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x31
+1591299.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x02
+1594507.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xd7
+1597715.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x2d
+1600923.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x72
+1604131.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x28
+1607339.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xdc
+1610547.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x8d
+1613755.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc6
+1616963.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xdc
+1620171.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x71
+1623379.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc7
+1626587.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xe0
+1629795.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x7f
+1633003.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1636211.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xf1
+1639419.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xc7
+1642627.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1645835.00ns INFO     cocotb.uart_tx.txd                 Read byte 0x00
+1649043.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xff
+1652251.00ns INFO     cocotb.uart_tx.txd                 Read byte 0xfe
+1652251.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00\xff\xf0\x00\x0e\x00\xe0\x00\xfc\x0f\xc0\x0e8\xe3\x80\xff\xff\xff\x0e\x00\x00\x0e\xfc\x00\x00\xf28\x00\x0e\xc7\xf0\x00\xf1\xf0\xe0\x0e\xfc\xef\xc0\xf27#\x8e\xc7\x1c\x7f\xf1\xff\xff\x00\xfc\x00\x0e\x0e8\x00\xfc\xff\xf0\x0e6\x00\xe0\xff\x0c\x0f\xce\x0e\xd8\xe3|\xf0?\xf16\xe3\x80\xf1\x03\xff\x0e\xf28\x0e\xf2\xc7\xf0\xf2\xc9\xf0\xee\xc9\x0c\xef1\x02\xd7-r(\xdc\x8d\xc6\xdcq\xc7\xe0\x7f\xff\xf1\xc7\x00\x00\xff\xfe')
+1654264.00ns INFO     cocotb.regression                  run_test_002 passed
+1654264.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                         ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         **************************************************************************************
+                                                         ** test_uart_tx.run_test_001      PASS      827128.00           4.09     202364.31  **
+                                                         ** test_uart_tx.run_test_002      PASS      827136.00           4.08     202802.73  **
+                                                         **************************************************************************************
+                                                         ** TESTS=2 PASS=2 FAIL=0 SKIP=0            1654264.00           9.07     182434.21  **
+                                                         **************************************************************************************
+                                                         
+make[1]: Leaving directory '/d/tt/verilog-uart/tb/uart_tx'

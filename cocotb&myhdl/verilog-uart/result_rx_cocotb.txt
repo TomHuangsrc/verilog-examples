@@ -1,0 +1,1113 @@
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/d/tt/verilog-uart/tb/uart_rx'
+rm -f results.xml
+MODULE=test_uart_rx TESTCASE= TOPLEVEL=uart_rx TOPLEVEL_LANG=verilog \
+         /c/iverilog/bin/vvp -M C:/Users/huanggk/AppData/Local/anaconda3/Lib/site-packages/cocotb/libs -m cocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed\gpi_embed.cpp:81   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (devel)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.1 from C:\Users\huanggk\AppData\Local\anaconda3\Lib\site-packages\cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1728972906
+     0.00ns INFO     cocotb.regression                  Found test test_uart_rx.run_test_001
+     0.00ns INFO     cocotb.regression                  Found test test_uart_rx.run_test_002
+     0.00ns INFO     cocotb.regression                  running run_test_001 (1/2)
+                                                          Automatically generated test
+                                                          
+                                                          payload_lengths: size_list (No docstring supplied)
+                                                          payload_data: incrementing_payload (No docstring supplied)
+     0.00ns INFO     cocotb.uart_rx.rxd                 UART source
+     0.00ns INFO     cocotb.uart_rx.rxd                 cocotbext-uart version 0.1.2
+     0.00ns INFO     cocotb.uart_rx.rxd                 Copyright (c) 2020 Alex Forencich
+     0.00ns INFO     cocotb.uart_rx.rxd                 https://github.com/alexforencich/cocotbext-uart
+     0.00ns INFO     cocotb.uart_rx.rxd                 UART source configuration:
+     0.00ns INFO     cocotb.uart_rx.rxd                   Baud rate: 3000000 bps
+     0.00ns INFO     cocotb.uart_rx.rxd                   Byte size: 8 bits
+     0.00ns INFO     cocotb.uart_rx.rxd                   Stop bits: 1.000000 bits
+     0.00ns INFO     cocotb.uart_rx.m_axis              AXI stream sink
+     0.00ns INFO     cocotb.uart_rx.m_axis              cocotbext-axi version 0.1.24
+     0.00ns INFO     cocotb.uart_rx.m_axis              Copyright (c) 2020 Alex Forencich
+     0.00ns INFO     cocotb.uart_rx.m_axis              https://github.com/alexforencich/cocotbext-axi
+     0.00ns INFO     cocotb.uart_rx.m_axis              AXI stream sink configuration:
+     0.00ns INFO     cocotb.uart_rx.m_axis                Byte size: 8 bits
+     0.00ns INFO     cocotb.uart_rx.m_axis                Data width: 8 bits (1 bytes)
+     0.00ns INFO     cocotb.uart_rx.m_axis              AXI stream sink signals:
+     0.00ns INFO     cocotb.uart_rx.m_axis                tdata width: 8 bits
+     0.00ns INFO     cocotb.uart_rx.m_axis                tdest: not present
+     0.00ns INFO     cocotb.uart_rx.m_axis                tid: not present
+     0.00ns INFO     cocotb.uart_rx.m_axis                tkeep: not present
+     0.00ns INFO     cocotb.uart_rx.m_axis                tlast: not present
+     0.00ns INFO     cocotb.uart_rx.m_axis                tready width: 1 bits
+     0.00ns INFO     cocotb.uart_rx.m_axis                tuser: not present
+     0.00ns INFO     cocotb.uart_rx.m_axis                tvalid width: 1 bits
+     0.00ns INFO     cocotb.uart_rx.m_axis              Reset de-asserted
+     8.00ns INFO     cocotb.uart_rx.m_axis              Reset asserted
+    24.00ns INFO     cocotb.uart_rx.m_axis              Reset de-asserted
+    40.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+  3096.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=3096000, sim_time_end=3096000)
+  3096.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00')
+  5096.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+  8144.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=8144000, sim_time_end=8144000)
+  8426.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+ 11480.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=11480000, sim_time_end=11480000)
+ 11480.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01')
+ 13480.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+ 16528.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=16528000, sim_time_end=16528000)
+ 16810.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+ 19864.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=19864000, sim_time_end=19864000)
+ 20140.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+ 23192.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=23192000, sim_time_end=23192000)
+ 23192.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02')
+ 25192.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+ 28240.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=28240000, sim_time_end=28240000)
+ 28522.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+ 31576.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=31576000, sim_time_end=31576000)
+ 31852.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+ 34904.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=34904000, sim_time_end=34904000)
+ 35182.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+ 38232.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=38232000, sim_time_end=38232000)
+ 38232.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03')
+ 40232.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+ 43280.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=43280000, sim_time_end=43280000)
+ 43562.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+ 46616.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=46616000, sim_time_end=46616000)
+ 46892.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+ 49944.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=49944000, sim_time_end=49944000)
+ 50222.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+ 53272.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=53272000, sim_time_end=53272000)
+ 53552.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+ 56600.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=56600000, sim_time_end=56600000)
+ 56600.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04')
+ 58600.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+ 61648.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=61648000, sim_time_end=61648000)
+ 61930.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+ 64984.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=64984000, sim_time_end=64984000)
+ 65260.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+ 68312.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=68312000, sim_time_end=68312000)
+ 68590.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+ 71640.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=71640000, sim_time_end=71640000)
+ 71920.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+ 74968.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=74968000, sim_time_end=74968000)
+ 75250.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+ 78304.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=78304000, sim_time_end=78304000)
+ 78304.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05')
+ 80304.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+ 83352.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=83352000, sim_time_end=83352000)
+ 83634.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+ 86688.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=86688000, sim_time_end=86688000)
+ 86964.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+ 90016.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=90016000, sim_time_end=90016000)
+ 90294.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+ 93344.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=93344000, sim_time_end=93344000)
+ 93624.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+ 96672.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=96672000, sim_time_end=96672000)
+ 96954.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+100008.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=100008000, sim_time_end=100008000)
+100284.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+103336.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=103336000, sim_time_end=103336000)
+103336.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06')
+105336.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+108384.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=108384000, sim_time_end=108384000)
+108666.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+111720.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=111720000, sim_time_end=111720000)
+111996.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+115048.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=115048000, sim_time_end=115048000)
+115326.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+118376.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=118376000, sim_time_end=118376000)
+118656.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+121704.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=121704000, sim_time_end=121704000)
+121986.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+125040.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=125040000, sim_time_end=125040000)
+125316.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+128368.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=128368000, sim_time_end=128368000)
+128646.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+131696.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=131696000, sim_time_end=131696000)
+131696.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07')
+133696.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+136744.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=136744000, sim_time_end=136744000)
+137026.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+140080.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=140080000, sim_time_end=140080000)
+140356.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+143408.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=143408000, sim_time_end=143408000)
+143686.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+146736.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=146736000, sim_time_end=146736000)
+147016.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+150064.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=150064000, sim_time_end=150064000)
+150346.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+153400.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=153400000, sim_time_end=153400000)
+153676.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+156728.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=156728000, sim_time_end=156728000)
+157006.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+160056.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=160056000, sim_time_end=160056000)
+160336.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x08
+163384.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x08'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=163384000, sim_time_end=163384000)
+163384.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08')
+165384.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+168432.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=168432000, sim_time_end=168432000)
+168714.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+171768.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=171768000, sim_time_end=171768000)
+172044.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+175096.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=175096000, sim_time_end=175096000)
+175374.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+178424.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=178424000, sim_time_end=178424000)
+178704.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+181752.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=181752000, sim_time_end=181752000)
+182034.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+185088.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=185088000, sim_time_end=185088000)
+185364.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+188416.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=188416000, sim_time_end=188416000)
+188694.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+191744.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=191744000, sim_time_end=191744000)
+192024.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x08
+195072.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x08'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=195072000, sim_time_end=195072000)
+195354.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x09
+198408.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\t'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=198408000, sim_time_end=198408000)
+198408.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t')
+200408.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+203456.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=203456000, sim_time_end=203456000)
+203738.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+206792.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=206792000, sim_time_end=206792000)
+207068.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+210120.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=210120000, sim_time_end=210120000)
+210398.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+213448.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=213448000, sim_time_end=213448000)
+213728.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+216776.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=216776000, sim_time_end=216776000)
+217058.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+220112.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=220112000, sim_time_end=220112000)
+220388.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+223440.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=223440000, sim_time_end=223440000)
+223718.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+226768.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=226768000, sim_time_end=226768000)
+227048.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x08
+230096.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x08'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=230096000, sim_time_end=230096000)
+230378.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x09
+233432.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\t'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=233432000, sim_time_end=233432000)
+233708.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0a
+236760.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\n'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=236760000, sim_time_end=236760000)
+236760.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n')
+238760.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+241808.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=241808000, sim_time_end=241808000)
+242090.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+245144.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=245144000, sim_time_end=245144000)
+245420.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+248472.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=248472000, sim_time_end=248472000)
+248750.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+251800.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=251800000, sim_time_end=251800000)
+252080.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+255128.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=255128000, sim_time_end=255128000)
+255410.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+258464.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=258464000, sim_time_end=258464000)
+258740.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+261792.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=261792000, sim_time_end=261792000)
+262070.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+265120.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=265120000, sim_time_end=265120000)
+265400.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x08
+268448.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x08'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=268448000, sim_time_end=268448000)
+268730.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x09
+271784.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\t'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=271784000, sim_time_end=271784000)
+272060.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0a
+275112.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\n'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=275112000, sim_time_end=275112000)
+275390.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0b
+278440.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0b'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=278440000, sim_time_end=278440000)
+278440.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b')
+280440.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+283488.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=283488000, sim_time_end=283488000)
+283770.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+286824.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=286824000, sim_time_end=286824000)
+287100.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+290152.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=290152000, sim_time_end=290152000)
+290430.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+293480.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=293480000, sim_time_end=293480000)
+293760.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+296808.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=296808000, sim_time_end=296808000)
+297090.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+300144.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=300144000, sim_time_end=300144000)
+300420.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+303472.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=303472000, sim_time_end=303472000)
+303750.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+306800.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=306800000, sim_time_end=306800000)
+307080.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x08
+310128.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x08'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=310128000, sim_time_end=310128000)
+310410.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x09
+313464.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\t'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=313464000, sim_time_end=313464000)
+313740.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0a
+316792.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\n'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=316792000, sim_time_end=316792000)
+317070.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0b
+320120.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0b'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=320120000, sim_time_end=320120000)
+320400.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0c
+323448.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=323448000, sim_time_end=323448000)
+323448.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c')
+325448.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+328496.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=328496000, sim_time_end=328496000)
+328778.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+331832.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=331832000, sim_time_end=331832000)
+332108.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+335160.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=335160000, sim_time_end=335160000)
+335438.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+338488.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=338488000, sim_time_end=338488000)
+338768.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+341816.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=341816000, sim_time_end=341816000)
+342098.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+345152.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=345152000, sim_time_end=345152000)
+345428.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+348480.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=348480000, sim_time_end=348480000)
+348758.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+351808.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=351808000, sim_time_end=351808000)
+352088.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x08
+355136.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x08'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=355136000, sim_time_end=355136000)
+355418.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x09
+358472.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\t'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=358472000, sim_time_end=358472000)
+358748.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0a
+361800.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\n'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=361800000, sim_time_end=361800000)
+362078.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0b
+365128.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0b'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=365128000, sim_time_end=365128000)
+365408.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0c
+368456.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=368456000, sim_time_end=368456000)
+368738.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0d
+371792.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\r'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=371792000, sim_time_end=371792000)
+371792.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r')
+373792.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+376840.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=376840000, sim_time_end=376840000)
+377122.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+380176.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=380176000, sim_time_end=380176000)
+380452.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+383504.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=383504000, sim_time_end=383504000)
+383782.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+386832.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=386832000, sim_time_end=386832000)
+387112.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+390160.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=390160000, sim_time_end=390160000)
+390442.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+393496.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=393496000, sim_time_end=393496000)
+393772.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+396824.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=396824000, sim_time_end=396824000)
+397102.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+400152.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=400152000, sim_time_end=400152000)
+400432.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x08
+403480.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x08'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=403480000, sim_time_end=403480000)
+403762.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x09
+406816.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\t'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=406816000, sim_time_end=406816000)
+407092.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0a
+410144.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\n'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=410144000, sim_time_end=410144000)
+410422.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0b
+413472.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0b'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=413472000, sim_time_end=413472000)
+413752.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0c
+416800.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=416800000, sim_time_end=416800000)
+417082.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0d
+420136.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\r'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=420136000, sim_time_end=420136000)
+420412.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+423464.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=423464000, sim_time_end=423464000)
+423464.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e')
+425464.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+428512.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=428512000, sim_time_end=428512000)
+428794.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x01
+431848.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x01'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=431848000, sim_time_end=431848000)
+432124.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+435176.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=435176000, sim_time_end=435176000)
+435454.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+438504.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=438504000, sim_time_end=438504000)
+438784.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x04
+441832.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x04'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=441832000, sim_time_end=441832000)
+442114.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x05
+445168.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x05'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=445168000, sim_time_end=445168000)
+445444.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x06
+448496.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x06'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=448496000, sim_time_end=448496000)
+448774.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x07
+451824.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x07'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=451824000, sim_time_end=451824000)
+452104.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x08
+455152.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x08'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=455152000, sim_time_end=455152000)
+455434.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x09
+458488.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\t'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=458488000, sim_time_end=458488000)
+458764.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0a
+461816.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\n'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=461816000, sim_time_end=461816000)
+462094.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0b
+465144.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0b'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=465144000, sim_time_end=465144000)
+465424.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0c
+468472.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=468472000, sim_time_end=468472000)
+468754.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0d
+471808.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\r'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=471808000, sim_time_end=471808000)
+472084.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+475136.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=475136000, sim_time_end=475136000)
+475414.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0f
+478464.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0f'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=478464000, sim_time_end=478464000)
+478744.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x10
+481792.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x10'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=481792000, sim_time_end=481792000)
+482074.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x11
+485128.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x11'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=485128000, sim_time_end=485128000)
+485404.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x12
+488456.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x12'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=488456000, sim_time_end=488456000)
+488734.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x13
+491784.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x13'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=491784000, sim_time_end=491784000)
+492064.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x14
+495112.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x14'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=495112000, sim_time_end=495112000)
+495394.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x15
+498448.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x15'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=498448000, sim_time_end=498448000)
+498724.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x16
+501776.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x16'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=501776000, sim_time_end=501776000)
+502054.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x17
+505104.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x17'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=505104000, sim_time_end=505104000)
+505384.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x18
+508432.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x18'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=508432000, sim_time_end=508432000)
+508714.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x19
+511768.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x19'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=511768000, sim_time_end=511768000)
+512044.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x1a
+515096.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x1a'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=515096000, sim_time_end=515096000)
+515374.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x1b
+518424.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x1b'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=518424000, sim_time_end=518424000)
+518704.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x1c
+521752.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x1c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=521752000, sim_time_end=521752000)
+522034.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x1d
+525088.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x1d'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=525088000, sim_time_end=525088000)
+525364.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x1e
+528416.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x1e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=528416000, sim_time_end=528416000)
+528694.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x1f
+531744.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x1f'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=531744000, sim_time_end=531744000)
+532024.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x20
+535072.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b' '), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=535072000, sim_time_end=535072000)
+535354.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x21
+538408.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'!'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=538408000, sim_time_end=538408000)
+538684.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x22
+541736.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'"'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=541736000, sim_time_end=541736000)
+542014.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x23
+545064.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'#'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=545064000, sim_time_end=545064000)
+545344.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x24
+548392.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'$'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=548392000, sim_time_end=548392000)
+548674.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x25
+551728.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'%'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=551728000, sim_time_end=551728000)
+552004.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x26
+555056.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'&'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=555056000, sim_time_end=555056000)
+555334.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x27
+558384.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b"\'"), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=558384000, sim_time_end=558384000)
+558664.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x28
+561712.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'('), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=561712000, sim_time_end=561712000)
+561994.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x29
+565048.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b')'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=565048000, sim_time_end=565048000)
+565324.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x2a
+568376.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'*'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=568376000, sim_time_end=568376000)
+568654.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x2b
+571704.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'+'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=571704000, sim_time_end=571704000)
+571984.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x2c
+575032.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b','), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=575032000, sim_time_end=575032000)
+575314.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x2d
+578368.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'-'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=578368000, sim_time_end=578368000)
+578644.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x2e
+581696.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'.'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=581696000, sim_time_end=581696000)
+581974.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x2f
+585024.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'/'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=585024000, sim_time_end=585024000)
+585304.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x30
+588352.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=588352000, sim_time_end=588352000)
+588634.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x31
+591688.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'1'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=591688000, sim_time_end=591688000)
+591964.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x32
+595016.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'2'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=595016000, sim_time_end=595016000)
+595294.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x33
+598344.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'3'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=598344000, sim_time_end=598344000)
+598624.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x34
+601672.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'4'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=601672000, sim_time_end=601672000)
+601954.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x35
+605008.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'5'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=605008000, sim_time_end=605008000)
+605284.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x36
+608336.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'6'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=608336000, sim_time_end=608336000)
+608614.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x37
+611664.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'7'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=611664000, sim_time_end=611664000)
+611944.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+614992.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=614992000, sim_time_end=614992000)
+615274.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x39
+618328.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'9'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=618328000, sim_time_end=618328000)
+618604.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x3a
+621656.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b':'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=621656000, sim_time_end=621656000)
+621934.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x3b
+624984.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b';'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=624984000, sim_time_end=624984000)
+625264.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x3c
+628312.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'<'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=628312000, sim_time_end=628312000)
+628594.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x3d
+631648.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'='), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=631648000, sim_time_end=631648000)
+631924.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x3e
+634976.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'>'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=634976000, sim_time_end=634976000)
+635254.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x3f
+638304.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'?'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=638304000, sim_time_end=638304000)
+638584.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x40
+641632.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'@'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=641632000, sim_time_end=641632000)
+641914.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x41
+644968.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'A'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=644968000, sim_time_end=644968000)
+645244.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x42
+648296.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'B'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=648296000, sim_time_end=648296000)
+648574.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x43
+651624.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'C'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=651624000, sim_time_end=651624000)
+651904.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x44
+654952.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'D'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=654952000, sim_time_end=654952000)
+655234.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x45
+658288.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'E'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=658288000, sim_time_end=658288000)
+658564.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x46
+661616.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'F'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=661616000, sim_time_end=661616000)
+661894.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x47
+664944.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'G'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=664944000, sim_time_end=664944000)
+665224.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x48
+668272.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'H'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=668272000, sim_time_end=668272000)
+668554.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x49
+671608.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'I'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=671608000, sim_time_end=671608000)
+671884.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x4a
+674936.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'J'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=674936000, sim_time_end=674936000)
+675214.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x4b
+678264.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'K'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=678264000, sim_time_end=678264000)
+678544.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x4c
+681592.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'L'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=681592000, sim_time_end=681592000)
+681874.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x4d
+684928.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'M'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=684928000, sim_time_end=684928000)
+685204.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x4e
+688256.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'N'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=688256000, sim_time_end=688256000)
+688534.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x4f
+691584.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'O'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=691584000, sim_time_end=691584000)
+691864.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x50
+694912.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'P'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=694912000, sim_time_end=694912000)
+695194.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x51
+698248.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'Q'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=698248000, sim_time_end=698248000)
+698524.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x52
+701576.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'R'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=701576000, sim_time_end=701576000)
+701854.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x53
+704904.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'S'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=704904000, sim_time_end=704904000)
+705184.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x54
+708232.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'T'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=708232000, sim_time_end=708232000)
+708514.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x55
+711568.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'U'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=711568000, sim_time_end=711568000)
+711844.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x56
+714896.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'V'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=714896000, sim_time_end=714896000)
+715174.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x57
+718224.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'W'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=718224000, sim_time_end=718224000)
+718504.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x58
+721552.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'X'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=721552000, sim_time_end=721552000)
+721834.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x59
+724888.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'Y'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=724888000, sim_time_end=724888000)
+725164.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x5a
+728216.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'Z'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=728216000, sim_time_end=728216000)
+728494.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x5b
+731544.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'['), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=731544000, sim_time_end=731544000)
+731824.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x5c
+734872.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\\'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=734872000, sim_time_end=734872000)
+735154.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x5d
+738208.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b']'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=738208000, sim_time_end=738208000)
+738484.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x5e
+741536.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'^'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=741536000, sim_time_end=741536000)
+741814.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x5f
+744864.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'_'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=744864000, sim_time_end=744864000)
+745144.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x60
+748192.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'`'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=748192000, sim_time_end=748192000)
+748474.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x61
+751528.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'a'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=751528000, sim_time_end=751528000)
+751804.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x62
+754856.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'b'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=754856000, sim_time_end=754856000)
+755134.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x63
+758184.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=758184000, sim_time_end=758184000)
+758464.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x64
+761512.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'd'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=761512000, sim_time_end=761512000)
+761794.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x65
+764848.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=764848000, sim_time_end=764848000)
+765124.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x66
+768176.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'f'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=768176000, sim_time_end=768176000)
+768454.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x67
+771504.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'g'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=771504000, sim_time_end=771504000)
+771784.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x68
+774832.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'h'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=774832000, sim_time_end=774832000)
+775114.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x69
+778168.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'i'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=778168000, sim_time_end=778168000)
+778444.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x6a
+781496.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'j'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=781496000, sim_time_end=781496000)
+781774.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x6b
+784824.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'k'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=784824000, sim_time_end=784824000)
+785104.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x6c
+788152.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'l'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=788152000, sim_time_end=788152000)
+788434.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x6d
+791488.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'm'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=791488000, sim_time_end=791488000)
+791764.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x6e
+794816.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'n'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=794816000, sim_time_end=794816000)
+795094.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x6f
+798144.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'o'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=798144000, sim_time_end=798144000)
+798424.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x70
+801472.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'p'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=801472000, sim_time_end=801472000)
+801754.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x71
+804808.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'q'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=804808000, sim_time_end=804808000)
+805084.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x72
+808136.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'r'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=808136000, sim_time_end=808136000)
+808414.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x73
+811464.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b's'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=811464000, sim_time_end=811464000)
+811744.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x74
+814792.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b't'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=814792000, sim_time_end=814792000)
+815074.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x75
+818128.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'u'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=818128000, sim_time_end=818128000)
+818404.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x76
+821456.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'v'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=821456000, sim_time_end=821456000)
+821734.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x77
+824784.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'w'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=824784000, sim_time_end=824784000)
+825064.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x78
+828112.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'x'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=828112000, sim_time_end=828112000)
+828394.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x79
+831448.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'y'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=831448000, sim_time_end=831448000)
+831724.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7a
+834776.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'z'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=834776000, sim_time_end=834776000)
+835054.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7b
+838104.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'{'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=838104000, sim_time_end=838104000)
+838384.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7c
+841432.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'|'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=841432000, sim_time_end=841432000)
+841714.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7d
+844768.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'}'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=844768000, sim_time_end=844768000)
+845044.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7e
+848096.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'~'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=848096000, sim_time_end=848096000)
+848374.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7f
+851424.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x7f'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=851424000, sim_time_end=851424000)
+851424.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f')
+853432.00ns INFO     cocotb.regression                  run_test_001 passed
+853432.00ns INFO     cocotb.regression                  running run_test_002 (2/2)
+                                                          Automatically generated test
+                                                          
+                                                          payload_lengths: size_list (No docstring supplied)
+                                                          payload_data: prbs_payload (No docstring supplied)
+853432.00ns INFO     cocotb.uart_rx.rxd                 UART source
+853432.00ns INFO     cocotb.uart_rx.rxd                 cocotbext-uart version 0.1.2
+853432.00ns INFO     cocotb.uart_rx.rxd                 Copyright (c) 2020 Alex Forencich
+853432.00ns INFO     cocotb.uart_rx.rxd                 https://github.com/alexforencich/cocotbext-uart
+853432.00ns INFO     cocotb.uart_rx.rxd                 UART source configuration:
+853432.00ns INFO     cocotb.uart_rx.rxd                   Baud rate: 3000000 bps
+853432.00ns INFO     cocotb.uart_rx.rxd                   Byte size: 8 bits
+853432.00ns INFO     cocotb.uart_rx.rxd                   Stop bits: 1.000000 bits
+853432.00ns INFO     cocotb.uart_rx.m_axis              AXI stream sink
+853432.00ns INFO     cocotb.uart_rx.m_axis              cocotbext-axi version 0.1.24
+853432.00ns INFO     cocotb.uart_rx.m_axis              Copyright (c) 2020 Alex Forencich
+853432.00ns INFO     cocotb.uart_rx.m_axis              https://github.com/alexforencich/cocotbext-axi
+853432.00ns INFO     cocotb.uart_rx.m_axis              AXI stream sink configuration:
+853432.00ns INFO     cocotb.uart_rx.m_axis                Byte size: 8 bits
+853432.00ns INFO     cocotb.uart_rx.m_axis                Data width: 8 bits (1 bytes)
+853432.00ns INFO     cocotb.uart_rx.m_axis              AXI stream sink signals:
+853432.00ns INFO     cocotb.uart_rx.m_axis                tdata width: 8 bits
+853432.00ns INFO     cocotb.uart_rx.m_axis                tdest: not present
+853432.00ns INFO     cocotb.uart_rx.m_axis                tid: not present
+853432.00ns INFO     cocotb.uart_rx.m_axis                tkeep: not present
+853432.00ns INFO     cocotb.uart_rx.m_axis                tlast: not present
+853432.00ns INFO     cocotb.uart_rx.m_axis                tready width: 1 bits
+853432.00ns INFO     cocotb.uart_rx.m_axis                tuser: not present
+853432.00ns INFO     cocotb.uart_rx.m_axis                tvalid width: 1 bits
+853432.00ns INFO     cocotb.uart_rx.m_axis              Reset de-asserted
+853448.00ns INFO     cocotb.uart_rx.m_axis              Reset asserted
+853464.00ns INFO     cocotb.uart_rx.m_axis              Reset de-asserted
+853480.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+856536.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=856536001, sim_time_end=856536001)
+856536.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00')
+858536.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+861584.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=861584001, sim_time_end=861584001)
+861866.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+864920.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=864920001, sim_time_end=864920001)
+864920.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00')
+866920.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+869968.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=869968001, sim_time_end=869968001)
+870250.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+873304.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=873304001, sim_time_end=873304001)
+873580.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+876632.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=876632001, sim_time_end=876632001)
+876632.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00')
+878632.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+881680.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=881680001, sim_time_end=881680001)
+881962.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+885016.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=885016001, sim_time_end=885016001)
+885292.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+888344.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=888344001, sim_time_end=888344001)
+888622.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+891672.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=891672001, sim_time_end=891672001)
+891672.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e')
+893672.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+896720.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=896720001, sim_time_end=896720001)
+897002.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+900056.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=900056001, sim_time_end=900056001)
+900332.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+903384.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=903384001, sim_time_end=903384001)
+903662.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+906712.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=906712001, sim_time_end=906712001)
+906992.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+910040.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=910040001, sim_time_end=910040001)
+910040.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00')
+912040.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+915088.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=915088001, sim_time_end=915088001)
+915370.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+918424.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=918424001, sim_time_end=918424001)
+918700.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+921752.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=921752001, sim_time_end=921752001)
+922030.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+925080.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=925080001, sim_time_end=925080001)
+925360.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+928408.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=928408001, sim_time_end=928408001)
+928690.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+931744.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=931744001, sim_time_end=931744001)
+931744.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00')
+933744.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+936792.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=936792001, sim_time_end=936792001)
+937074.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+940128.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=940128001, sim_time_end=940128001)
+940404.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+943456.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=943456001, sim_time_end=943456001)
+943734.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+946784.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=946784001, sim_time_end=946784001)
+947064.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+950112.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=950112001, sim_time_end=950112001)
+950394.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+953448.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=953448001, sim_time_end=953448001)
+953724.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+956776.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=956776001, sim_time_end=956776001)
+956776.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00')
+958776.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+961824.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=961824001, sim_time_end=961824001)
+962106.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+965160.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=965160001, sim_time_end=965160001)
+965436.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+968488.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=968488001, sim_time_end=968488001)
+968766.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+971816.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=971816001, sim_time_end=971816001)
+972096.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+975144.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=975144001, sim_time_end=975144001)
+975426.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+978480.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=978480001, sim_time_end=978480001)
+978756.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+981808.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=981808001, sim_time_end=981808001)
+982086.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+985136.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=985136001, sim_time_end=985136001)
+985136.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc')
+987136.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+990184.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=990184001, sim_time_end=990184001)
+990466.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+993520.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=993520001, sim_time_end=993520001)
+993796.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+996848.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=996848001, sim_time_end=996848001)
+997126.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1000176.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1000176001, sim_time_end=1000176001)
+1000456.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1003504.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1003504001, sim_time_end=1003504001)
+1003786.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1006840.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1006840001, sim_time_end=1006840001)
+1007116.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1010168.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1010168001, sim_time_end=1010168001)
+1010446.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1013496.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1013496001, sim_time_end=1013496001)
+1013776.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1016824.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1016824001, sim_time_end=1016824001)
+1016824.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00')
+1018824.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1021872.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1021872001, sim_time_end=1021872001)
+1022154.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1025208.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1025208001, sim_time_end=1025208001)
+1025484.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1028536.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1028536001, sim_time_end=1028536001)
+1028814.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1031864.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1031864001, sim_time_end=1031864001)
+1032144.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1035192.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1035192001, sim_time_end=1035192001)
+1035474.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1038528.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1038528001, sim_time_end=1038528001)
+1038804.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1041856.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1041856001, sim_time_end=1041856001)
+1042134.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1045184.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1045184001, sim_time_end=1045184001)
+1045464.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1048512.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1048512001, sim_time_end=1048512001)
+1048794.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1051848.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1051848001, sim_time_end=1051848001)
+1051848.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00')
+1053848.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1056896.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1056896001, sim_time_end=1056896001)
+1057178.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1060232.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1060232001, sim_time_end=1060232001)
+1060508.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1063560.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1063560001, sim_time_end=1063560001)
+1063838.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1066888.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1066888001, sim_time_end=1066888001)
+1067168.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1070216.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1070216001, sim_time_end=1070216001)
+1070498.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1073552.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1073552001, sim_time_end=1073552001)
+1073828.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1076880.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1076880001, sim_time_end=1076880001)
+1077158.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1080208.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1080208001, sim_time_end=1080208001)
+1080488.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1083536.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1083536001, sim_time_end=1083536001)
+1083818.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1086872.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1086872001, sim_time_end=1086872001)
+1087148.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1090200.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1090200001, sim_time_end=1090200001)
+1090200.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e')
+1092200.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1095248.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1095248001, sim_time_end=1095248001)
+1095530.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1098584.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1098584001, sim_time_end=1098584001)
+1098860.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1101912.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1101912001, sim_time_end=1101912001)
+1102190.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1105240.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1105240001, sim_time_end=1105240001)
+1105520.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1108568.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1108568001, sim_time_end=1108568001)
+1108850.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1111904.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1111904001, sim_time_end=1111904001)
+1112180.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1115232.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1115232001, sim_time_end=1115232001)
+1115510.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1118560.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1118560001, sim_time_end=1118560001)
+1118840.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1121888.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1121888001, sim_time_end=1121888001)
+1122170.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1125224.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1125224001, sim_time_end=1125224001)
+1125500.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1128552.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1128552001, sim_time_end=1128552001)
+1128830.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1131880.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1131880001, sim_time_end=1131880001)
+1131880.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8')
+1133880.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1136928.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1136928001, sim_time_end=1136928001)
+1137210.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1140264.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1140264001, sim_time_end=1140264001)
+1140540.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1143592.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1143592001, sim_time_end=1143592001)
+1143870.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1146920.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1146920001, sim_time_end=1146920001)
+1147200.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1150248.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1150248001, sim_time_end=1150248001)
+1150530.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1153584.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1153584001, sim_time_end=1153584001)
+1153860.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1156912.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1156912001, sim_time_end=1156912001)
+1157190.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1160240.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1160240001, sim_time_end=1160240001)
+1160520.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1163568.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1163568001, sim_time_end=1163568001)
+1163850.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1166904.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1166904001, sim_time_end=1166904001)
+1167180.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1170232.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1170232001, sim_time_end=1170232001)
+1170510.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1173560.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1173560001, sim_time_end=1173560001)
+1173840.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1176888.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1176888001, sim_time_end=1176888001)
+1176888.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00')
+1178888.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1181936.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1181936001, sim_time_end=1181936001)
+1182218.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1185272.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1185272001, sim_time_end=1185272001)
+1185548.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1188600.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1188600001, sim_time_end=1188600001)
+1188878.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1191928.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1191928001, sim_time_end=1191928001)
+1192208.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1195256.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1195256001, sim_time_end=1195256001)
+1195538.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1198592.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1198592001, sim_time_end=1198592001)
+1198868.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1201920.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1201920001, sim_time_end=1201920001)
+1202198.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1205248.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1205248001, sim_time_end=1205248001)
+1205528.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1208576.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1208576001, sim_time_end=1208576001)
+1208858.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1211912.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1211912001, sim_time_end=1211912001)
+1212188.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1215240.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1215240001, sim_time_end=1215240001)
+1215518.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1218568.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1218568001, sim_time_end=1218568001)
+1218848.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1221896.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1221896001, sim_time_end=1221896001)
+1222178.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1225232.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1225232001, sim_time_end=1225232001)
+1225232.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00')
+1227232.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1230280.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1230280001, sim_time_end=1230280001)
+1230562.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1233616.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1233616001, sim_time_end=1233616001)
+1233892.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1236944.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1236944001, sim_time_end=1236944001)
+1237222.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1240272.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1240272001, sim_time_end=1240272001)
+1240552.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1243600.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1243600001, sim_time_end=1243600001)
+1243882.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1246936.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1246936001, sim_time_end=1246936001)
+1247212.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1250264.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1250264001, sim_time_end=1250264001)
+1250542.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1253592.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1253592001, sim_time_end=1253592001)
+1253872.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1256920.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1256920001, sim_time_end=1256920001)
+1257202.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1260256.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1260256001, sim_time_end=1260256001)
+1260532.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1263584.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1263584001, sim_time_end=1263584001)
+1263862.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1266912.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1266912001, sim_time_end=1266912001)
+1267192.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1270240.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1270240001, sim_time_end=1270240001)
+1270522.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1273576.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1273576001, sim_time_end=1273576001)
+1273852.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1276904.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1276904001, sim_time_end=1276904001)
+1276904.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00\xff')
+1278904.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1281952.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1281952001, sim_time_end=1281952001)
+1282234.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1285288.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1285288001, sim_time_end=1285288001)
+1285564.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1288616.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1288616001, sim_time_end=1288616001)
+1288894.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1291944.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1291944001, sim_time_end=1291944001)
+1292224.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1295272.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1295272001, sim_time_end=1295272001)
+1295554.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1298608.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1298608001, sim_time_end=1298608001)
+1298884.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1301936.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1301936001, sim_time_end=1301936001)
+1302214.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1305264.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1305264001, sim_time_end=1305264001)
+1305544.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1308592.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1308592001, sim_time_end=1308592001)
+1308874.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1311928.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1311928001, sim_time_end=1311928001)
+1312204.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1315256.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1315256001, sim_time_end=1315256001)
+1315534.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1318584.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1318584001, sim_time_end=1318584001)
+1318864.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1321912.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1321912001, sim_time_end=1321912001)
+1322194.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1325248.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1325248001, sim_time_end=1325248001)
+1325524.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1328576.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1328576001, sim_time_end=1328576001)
+1328854.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf0
+1331904.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1331904001, sim_time_end=1331904001)
+1332184.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1335232.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1335232001, sim_time_end=1335232001)
+1335514.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1338568.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1338568001, sim_time_end=1338568001)
+1338844.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1341896.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1341896001, sim_time_end=1341896001)
+1342174.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xe0
+1345224.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xe0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1345224001, sim_time_end=1345224001)
+1345504.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1348552.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1348552001, sim_time_end=1348552001)
+1348834.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1351888.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1351888001, sim_time_end=1351888001)
+1352164.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0f
+1355216.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0f'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1355216001, sim_time_end=1355216001)
+1355494.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc0
+1358544.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1358544001, sim_time_end=1358544001)
+1358824.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1361872.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1361872001, sim_time_end=1361872001)
+1362154.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1365208.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1365208001, sim_time_end=1365208001)
+1365484.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xe3
+1368536.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xe3'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1368536001, sim_time_end=1368536001)
+1368814.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x80
+1371864.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x80'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1371864001, sim_time_end=1371864001)
+1372144.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1375192.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1375192001, sim_time_end=1375192001)
+1375474.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1378528.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1378528001, sim_time_end=1378528001)
+1378804.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1381856.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1381856001, sim_time_end=1381856001)
+1382134.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1385184.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1385184001, sim_time_end=1385184001)
+1385464.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1388512.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1388512001, sim_time_end=1388512001)
+1388794.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1391848.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1391848001, sim_time_end=1391848001)
+1392124.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1395176.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1395176001, sim_time_end=1395176001)
+1395454.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1398504.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1398504001, sim_time_end=1398504001)
+1398784.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1401832.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1401832001, sim_time_end=1401832001)
+1402114.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1405168.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1405168001, sim_time_end=1405168001)
+1405444.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf2
+1408496.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf2'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1408496001, sim_time_end=1408496001)
+1408774.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1411824.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1411824001, sim_time_end=1411824001)
+1412104.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1415152.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1415152001, sim_time_end=1415152001)
+1415434.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1418488.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1418488001, sim_time_end=1418488001)
+1418764.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc7
+1421816.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc7'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1421816001, sim_time_end=1421816001)
+1422094.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf0
+1425144.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1425144001, sim_time_end=1425144001)
+1425424.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1428472.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1428472001, sim_time_end=1428472001)
+1428754.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf1
+1431808.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf1'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1431808001, sim_time_end=1431808001)
+1432084.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf0
+1435136.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1435136001, sim_time_end=1435136001)
+1435414.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xe0
+1438464.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xe0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1438464001, sim_time_end=1438464001)
+1438744.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1441792.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1441792001, sim_time_end=1441792001)
+1442074.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1445128.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1445128001, sim_time_end=1445128001)
+1445404.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xef
+1448456.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xef'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1448456001, sim_time_end=1448456001)
+1448734.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc0
+1451784.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1451784001, sim_time_end=1451784001)
+1452064.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf2
+1455112.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf2'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1455112001, sim_time_end=1455112001)
+1455394.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x37
+1458448.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'7'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1458448001, sim_time_end=1458448001)
+1458724.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x23
+1461776.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'#'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1461776001, sim_time_end=1461776001)
+1462054.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x8e
+1465104.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x8e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1465104001, sim_time_end=1465104001)
+1465384.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc7
+1468432.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc7'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1468432001, sim_time_end=1468432001)
+1468714.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x1c
+1471768.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x1c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1471768001, sim_time_end=1471768001)
+1472044.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7f
+1475096.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x7f'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1475096001, sim_time_end=1475096001)
+1475374.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf1
+1478424.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf1'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1478424001, sim_time_end=1478424001)
+1478704.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1481752.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1481752001, sim_time_end=1481752001)
+1482034.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1485088.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1485088001, sim_time_end=1485088001)
+1485364.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1488416.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1488416001, sim_time_end=1488416001)
+1488694.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1491744.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1491744001, sim_time_end=1491744001)
+1492024.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1495072.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1495072001, sim_time_end=1495072001)
+1495354.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1498408.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1498408001, sim_time_end=1498408001)
+1498684.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1501736.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1501736001, sim_time_end=1501736001)
+1502014.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1505064.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1505064001, sim_time_end=1505064001)
+1505344.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1508392.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1508392001, sim_time_end=1508392001)
+1508674.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfc
+1511728.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1511728001, sim_time_end=1511728001)
+1512004.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1515056.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1515056001, sim_time_end=1515056001)
+1515334.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf0
+1518384.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1518384001, sim_time_end=1518384001)
+1518664.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1521712.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1521712001, sim_time_end=1521712001)
+1521994.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x36
+1525048.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'6'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1525048001, sim_time_end=1525048001)
+1525324.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1528376.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1528376001, sim_time_end=1528376001)
+1528654.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xe0
+1531704.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xe0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1531704001, sim_time_end=1531704001)
+1531984.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1535032.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1535032001, sim_time_end=1535032001)
+1535314.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0c
+1538368.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1538368001, sim_time_end=1538368001)
+1538644.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0f
+1541696.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0f'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1541696001, sim_time_end=1541696001)
+1541974.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xce
+1545024.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xce'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1545024001, sim_time_end=1545024001)
+1545304.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1548352.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1548352001, sim_time_end=1548352001)
+1548634.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xd8
+1551688.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xd8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1551688001, sim_time_end=1551688001)
+1551964.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xe3
+1555016.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xe3'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1555016001, sim_time_end=1555016001)
+1555294.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7c
+1558344.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'|'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1558344001, sim_time_end=1558344001)
+1558624.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf0
+1561672.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1561672001, sim_time_end=1561672001)
+1561954.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x3f
+1565008.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'?'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1565008001, sim_time_end=1565008001)
+1565284.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf1
+1568336.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf1'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1568336001, sim_time_end=1568336001)
+1568614.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x36
+1571664.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'6'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1571664001, sim_time_end=1571664001)
+1571944.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xe3
+1574992.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xe3'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1574992001, sim_time_end=1574992001)
+1575274.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x80
+1578328.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x80'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1578328001, sim_time_end=1578328001)
+1578604.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf1
+1581656.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf1'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1581656001, sim_time_end=1581656001)
+1581934.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x03
+1584984.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x03'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1584984001, sim_time_end=1584984001)
+1585264.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1588312.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1588312001, sim_time_end=1588312001)
+1588594.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1591648.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1591648001, sim_time_end=1591648001)
+1591924.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf2
+1594976.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf2'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1594976001, sim_time_end=1594976001)
+1595254.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x38
+1598304.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'8'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1598304001, sim_time_end=1598304001)
+1598584.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0e
+1601632.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0e'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1601632001, sim_time_end=1601632001)
+1601914.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf2
+1604968.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf2'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1604968001, sim_time_end=1604968001)
+1605244.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc7
+1608296.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc7'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1608296001, sim_time_end=1608296001)
+1608574.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf0
+1611624.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1611624001, sim_time_end=1611624001)
+1611904.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf2
+1614952.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf2'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1614952001, sim_time_end=1614952001)
+1615234.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc9
+1618288.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc9'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1618288001, sim_time_end=1618288001)
+1618564.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf0
+1621616.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1621616001, sim_time_end=1621616001)
+1621894.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xee
+1624944.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xee'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1624944001, sim_time_end=1624944001)
+1625224.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc9
+1628272.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc9'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1628272001, sim_time_end=1628272001)
+1628554.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x0c
+1631608.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x0c'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1631608001, sim_time_end=1631608001)
+1631884.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xef
+1634936.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xef'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1634936001, sim_time_end=1634936001)
+1635214.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x31
+1638264.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'1'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1638264001, sim_time_end=1638264001)
+1638544.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x02
+1641592.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x02'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1641592001, sim_time_end=1641592001)
+1641874.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xd7
+1644928.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xd7'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1644928001, sim_time_end=1644928001)
+1645204.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x2d
+1648256.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'-'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1648256001, sim_time_end=1648256001)
+1648534.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x72
+1651584.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'r'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1651584001, sim_time_end=1651584001)
+1651864.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x28
+1654912.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'('), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1654912001, sim_time_end=1654912001)
+1655194.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xdc
+1658248.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xdc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1658248001, sim_time_end=1658248001)
+1658524.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x8d
+1661576.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x8d'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1661576001, sim_time_end=1661576001)
+1661854.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc6
+1664904.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc6'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1664904001, sim_time_end=1664904001)
+1665184.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xdc
+1668232.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xdc'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1668232001, sim_time_end=1668232001)
+1668514.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x71
+1671568.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'q'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1671568001, sim_time_end=1671568001)
+1671844.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc7
+1674896.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc7'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1674896001, sim_time_end=1674896001)
+1675174.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xe0
+1678224.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xe0'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1678224001, sim_time_end=1678224001)
+1678504.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x7f
+1681552.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x7f'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1681552001, sim_time_end=1681552001)
+1681834.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1684888.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1684888001, sim_time_end=1684888001)
+1685164.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xf1
+1688216.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xf1'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1688216001, sim_time_end=1688216001)
+1688494.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xc7
+1691544.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xc7'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1691544001, sim_time_end=1691544001)
+1691824.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1694872.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1694872001, sim_time_end=1694872001)
+1695154.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0x00
+1698208.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\x00'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1698208001, sim_time_end=1698208001)
+1698484.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xff
+1701536.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xff'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1701536001, sim_time_end=1701536001)
+1701814.00ns INFO     cocotb.uart_rx.rxd                 Write byte 0xfe
+1704864.00ns INFO     cocotb.uart_rx.m_axis              RX frame: AxiStreamFrame(tdata=bytearray(b'\xfe'), tkeep=[], tid=[], tdest=[], tuser=[], sim_time_start=1704864001, sim_time_end=1704864001)
+1704864.00ns INFO     cocotb.tb                          Read data: bytearray(b'\x00\x00\x00\x0e\x00\x00\x00\xfc\x00\x00\x0e8\x00\x00\xff\xf0\x00\x0e\x00\xe0\x00\xfc\x0f\xc0\x0e8\xe3\x80\xff\xff\xff\x0e\x00\x00\x0e\xfc\x00\x00\xf28\x00\x0e\xc7\xf0\x00\xf1\xf0\xe0\x0e\xfc\xef\xc0\xf27#\x8e\xc7\x1c\x7f\xf1\xff\xff\x00\xfc\x00\x0e\x0e8\x00\xfc\xff\xf0\x0e6\x00\xe0\xff\x0c\x0f\xce\x0e\xd8\xe3|\xf0?\xf16\xe3\x80\xf1\x03\xff\x0e\xf28\x0e\xf2\xc7\xf0\xf2\xc9\xf0\xee\xc9\x0c\xef1\x02\xd7-r(\xdc\x8d\xc6\xdcq\xc7\xe0\x7f\xff\xf1\xc7\x00\x00\xff\xfe')
+1706872.00ns INFO     cocotb.regression                  run_test_002 passed
+1706872.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                         ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         **************************************************************************************
+                                                         ** test_uart_rx.run_test_001      PASS      853432.00           3.32     256881.72  **
+                                                         ** test_uart_rx.run_test_002      PASS      853440.00           3.31     257467.68  **
+                                                         **************************************************************************************
+                                                         ** TESTS=2 PASS=2 FAIL=0 SKIP=0            1706872.00           6.77     251973.61  **
+                                                         **************************************************************************************
+                                                         
+make[1]: Leaving directory '/d/tt/verilog-uart/tb/uart_rx'
